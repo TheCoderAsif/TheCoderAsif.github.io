@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Game Of 50/50</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      alert("Welcome to 'The Game of 50/50'.This is a game of probability or simplly game of luck.");
+      alert("The rules are simple.You'll play for 10 times.You'll draw if you get 50%.The victory will come for more than 50% and loss is less than 50%.");
+      alert("~Begin~");
+    </script>
+    <center><h1>Select:</h1><center>
+      <p> </p>
+    <center><img src="button1.png" alt="" onclick="button1clicked()">
+      <img src="button2.png" alt="" onclick="button2clicked()"></center>
+    <progress max="100" value="50" id="pb1"></progress>
+    <script type="text/javascript">
+    var clicked=0;
+      function button1clicked(){
+        if(clicked==9){
+          var val=document.getElementById('pb1');
+          if(val.value>50) alert("~Victory~");
+          else if(val.value<50) alert("~Defeat~");
+          else alert("~Draw~");
+        }
+        else if(clicked<10){
+          var val=document.getElementById('pb1');
+          var num=Math.floor(Math.random() * 10);
+          if(num%2!=0) val.value=val.value+10;
+          else val.value=val.value-10;
+          clicked+=1;
+        }
+        else{
+          var val=document.getElementById('pb1');
+          if(val.value>50) alert("~Victory~");
+          else if(val.value<50) alert("~Defeat~");
+          else alert("~Draw~");
+        }
+      }
+      function button2clicked(){
+        if(clicked==9){
+          var val=document.getElementById('pb1');
+          if(val.value>50) alert("~Victory~");
+          else if(val.value<50) alert("~Defeat~");
+          else alert("~Draw~");
+        }
+        if (clicked<10){
+          var val=document.getElementById('pb1');
+          var num=Math.floor(Math.random() * 10);
+          if(num%2==0) val.value=val.value+10;
+          else val.value=val.value-10;
+          clicked+=1;
+        }
+        else{
+          var val=document.getElementById('pb1');
+          if(val.value>50) alert("~Victory~");
+          else if(val.value<50) alert("~Defeat~");
+          else alert("~Draw~");
+        }
+      }
+    </script>
+  </body>
+</html>
