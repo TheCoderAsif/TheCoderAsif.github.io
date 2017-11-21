@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>50/50</title>
+    <style media="screen">
+    </style>
+  </head>
+  <body>
+    <center><h1 id="hd">Select:</h1><center>
+      <p> </p>
+    <center><img src="button1.png" alt="" onclick="button1clicked()">
+    <img src="button2.png" alt="" onclick="button2clicked()"></center>
+    <progress max="100" value="50" id="pb1"></progress>
+    <h2>Select carefully.</h2>
+    <h3 id="cs1">1st Case:</h3>
+    <h3 id="cs2">2nd Case:</h3>
+    <h3 id="cs3">3rd Case:</h3>
+    <h3 id="cs4">4th Case:</h3>
+    <button type="button" name="button" onclick="read_ins()">Read The Instructions</button>
+    <h3>Send your "Succeed" screenshot to your friends and challenge them.</h3>
+    <u><h4>Champ List</h4></u>
+    <h5>[In development]</h5>
+    <script type="text/javascript">
+    var clicked=0,r1=0,r2=0,r3=0,r4=0;
+    var name;
+      function button1clicked(){
+        if(clicked<40){
+          var val=document.getElementById('pb1');
+          var num=Math.floor(Math.random() * 10);
+          if(num%2!=0) val.value=val.value+10;
+          else val.value=val.value-10;
+          clicked+=1;
+          if(clicked==10){
+            var val=document.getElementById('pb1');
+            if(val.value==50){
+              alert("~Succeed~");
+              r1=1;
+            }
+            else alert("~Failed~");
+            val.value=50;
+            if(r1==1) document.getElementById('cs1').innerHTML="1st Case: Succeed";
+            else document.getElementById('cs1').innerHTML="1st Case: Failed";
+          }
+          if(clicked==20){
+            var val=document.getElementById('pb1');
+            if(val.value==50){
+              alert("~Succeed~");
+              r2=1;
+            }
+            else alert("~Failed~");
+            val.value=50;
+            if(r2==1) document.getElementById('cs2').innerHTML="2nd Case: Succeed";
+            else document.getElementById('cs2').innerHTML="2nd Case: Failed";
+          }
+          if(clicked==30){
+            var val=document.getElementById('pb1');
+            if(val.value==50){
+              alert("~Succeed~");
+              r3=1;
+            }
+            else alert("~Failed~");
+            val.value=50;
+            if(r3==1) document.getElementById('cs3').innerHTML="3rd Case: Succeed";
+            else document.getElementById('cs3').innerHTML="3rd Case: Failed";
+          }
+          if(clicked==40){
+            var val=document.getElementById('pb1');
+            if(val.value==50){
+              alert("~Succeed~");
+              r4=1;
+            }
+            else alert("~Failed~");
+            val.value=50;
+            if(r4==1) document.getElementById('cs4').innerHTML="4th Case: Succeed";
+            else document.getElementById('cs4').innerHTML="4th Case: Failed";
+            if(r1+r2+r3+r4==2){
+              alert("~Succeed~");
+              document.getElementById('hd').innerHTML="~Succeed~";
+              name=prompt("Enter Your Name:");
+
+            }
+            else{
+              alert("~Failed~");
+              document.getElementById('hd').innerHTML="~Failed~";
+            }
+          }
+        }
+        else{
+          if(r1+r2+r3+r4==2){
+            alert("~Succeed~");
+            document.getElementById('hd').innerHTML="~Succeed~";
+            name=prompt("Enter Your Name:");
+          }
+          else{
+            alert("~Failed~");
+            document.getElementById('hd').innerHTML="~Failed~";
+          }
+        }
+      }
+      //function 2
+      function button2clicked(){
+        if(clicked<40){
+          var val=document.getElementById('pb1');
+          var num=Math.floor(Math.random() * 10);
+          if(num%2==0) val.value=val.value+10;
+          else val.value=val.value-10;
+          clicked+=1;
+          if(clicked==10){
+            var val=document.getElementById('pb1');
+            if(val.value==50){
+              alert("~Succeed~");
+              r1=1;
+            }
+            else alert("~Failed~");
+            val.value=50;
+            if(r1==1) document.getElementById('cs1').innerHTML="1st Case: Succeed";
+            else document.getElementById('cs1').innerHTML="1st Case: Failed";
+          }
+          if(clicked==20){
+            var val=document.getElementById('pb1');
+            if(val.value==50){
+              alert("~Succeed~");
+              r2=1;
+            }
+            else alert("~Failed~");
+            val.value=50;
+            if(r2==1) document.getElementById('cs2').innerHTML="2nd Case: Succeed";
+            else document.getElementById('cs2').innerHTML="2nd Case: Failed";
+          }
+          if(clicked==30){
+            var val=document.getElementById('pb1');
+            if(val.value==50){
+              alert("~Succeed~");
+              r3=1;
+            }
+            else alert("~Failed~");
+            val.value=50;
+            if(r3==1) document.getElementById('cs3').innerHTML="3rd Case: Succeed";
+            else document.getElementById('cs3').innerHTML="3rd Case: Failed";
+          }
+          if(clicked==40){
+            var val=document.getElementById('pb1');
+            if(val.value==50){
+              alert("~Succeed~");
+              r4=1;
+            }
+            else alert("~Failed~");
+            val.value=50;
+            if(r4==1) document.getElementById('cs4').innerHTML="4th Case: Succeed";
+            else document.getElementById('cs4').innerHTML="4th Case: Failed";
+            if(r1+r2+r3+r4==2){
+              alert("~Succeed~");
+              document.getElementById('hd').innerHTML="~Succeed~";
+              name=prompt("Enter Your Name:");
+            }
+            else{
+              alert("~Failed~");
+              document.getElementById('hd').innerHTML="~Failed~";
+            }
+          }
+        }
+        else{
+          if(r1+r2+r3+r4==2){
+            alert("~Succeed~");
+            document.getElementById('hd').innerHTML="~Succeed~";
+            name=prompt("Enter Your Name:");
+          }
+          else{
+            alert("~Failed~");
+            document.getElementById('hd').innerHTML="~Failed~";
+          }
+        }
+      }
+    </script>
+    <script type="text/javascript">
+    function read_ins(){
+      alert("Helllo,Welcome to the game '50'. In this balance of everything is a must.");
+      alert("You'll need to balance the number of winning in two case and other two you have to get failed. That's mean in two case you need to get failed and in two you need to get succeed.");
+      alert("Play you'll know. Continue palying and Good Luck.")
+    }
+    </script>
+  </body>
+</html>

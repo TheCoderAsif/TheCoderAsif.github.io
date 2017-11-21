@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>50/50</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //alert("Welcome to 'The Game 50/50'.This is a game of probability or simplly game of luck.ALso a Easy hard challenging game");
+      //alert("The rules are simple.You'll play for 10 times.You'll have to get 50% at the end of the game.");
+      //alert("~Begin~");
+    </script>
+    <center><h1 id="hd">Select:</h1><center>
+      <p> </p>
+    <center><img src="button1.png" alt="" onclick="button1clicked()">
+    <img src="button2.png" alt="" onclick="button2clicked()"></center>
+    <progress max="100" value="50" id="pb1"></progress>
+    <h2>Select carefully.</h2>
+    <h3 id="cs1">1st Case:</h3>
+    <h3 id="cs2">2nd Case:</h3>
+    <h3 id="cs3">3rd Case:</h3>
+    <h3 id="cs4">4th Case:</h3>
+    <button type="button" name="button" onclick="read_ins()">Read The Instructions</button>
+    <h3>Send your "Victory" screenshot to your friends and challenge them.</h3>
+    <h4>[In development]</h4>
+    <script type="text/javascript">
+    var clicked=0,r1=0,r2=0,r3=0,r4=0;
+      function button1clicked(){
+        //30 clicks
+        if(clicked<30){
+          var val=document.getElementById('pb1');
+          var num=Math.floor(Math.random() * 10);
+          if(num%2!=0) val.value=val.value+10;
+          else val.value=val.value-10;
+          clicked+=1;
+          if(clicked==10){
+            var val=document.getElementById('pb1');
+            if(val.value==50){
+              alert("~Victory~");
+              r1=1;
+            }
+            else alert("~Defeat~");
+            val.value=50;
+            if(r1==1) document.getElementById('cs1').innerHTML="1st Case: Victory";
+            else document.getElementById('cs1').innerHTML="1st Case: Defeat";
+          }
+          if(clicked==20){
+            var val=document.getElementById('pb1');
+            if(val.value==50){
+              alert("~Victory~");
+              r2=1;
+            }
+            else alert("~Defeat~");
+            val.value=50;
+            if(r2==1) document.getElementById('cs2').innerHTML="2nd Case: Victory";
+            else document.getElementById('cs2').innerHTML="2nd Case: Defeat";
+          }
+          if(clicked==30){
+            var val=document.getElementById('pb1');
+            if(val.value==50){
+              alert("~Victory~");
+              r3=1;
+            }
+            else alert("~Defeat~");
+            val.value=50;
+            if(r3==1) document.getElementById('cs3').innerHTML="3rd Case: Victory";
+            else document.getElementById('cs3').innerHTML="3rd Case: Defeat";
+            if(r1+r2+r3>=2){
+              alert("~Victory~");
+              document.getElementById('hd').innerHTML="~VICTORY~";
+            }
+            else{
+              alert("~Defeat~");
+              document.getElementById('hd').innerHTML="~DEFEAT~";
+            }
+          }
+        }
+        //30 clicks
+        else{
+          if(r1+r2+r3>=2){
+            alert("~Victory~");
+            document.getElementById('hd').innerHTML="~VICTORY~";
+          }
+          else{
+            alert("~Defeat~");
+            document.getElementById('hd').innerHTML="~DEFEAT~";
+          }
+        }
+      }
+      function button2clicked(){
+        //30 clicks
+        if(clicked<30){
+          var val=document.getElementById('pb1');
+          var num=Math.floor(Math.random() * 10);
+          if(num%2==0) val.value=val.value+10;
+          else val.value=val.value-10;
+          clicked+=1;
+          if(clicked==10){
+            var val=document.getElementById('pb1');
+            if(val.value==50){
+              alert("~Victory~");
+              r1=1;
+            }
+            else alert("~Defeat~");
+            val.value=50;
+            if(r1==1) document.getElementById('cs1').innerHTML="1st Case: Victory";
+            else document.getElementById('cs1').innerHTML="1st Case: Defeat";
+          }
+          if(clicked==20){
+            var val=document.getElementById('pb1');
+            if(val.value==50){
+              alert("~Victory~");
+              r2=1;
+            }
+            else alert("~Defeat~");
+            val.value=50;
+            if(r2==1) document.getElementById('cs2').innerHTML="2nd Case: Victory";
+            else document.getElementById('cs2').innerHTML="2nd Case: Defeat";
+          }
+          if(clicked==30){
+            var val=document.getElementById('pb1');
+            if(val.value==50){
+              alert("~Victory~");
+              r3=1;
+            }
+            else alert("~Defeat~");
+            val.value=50;
+            if(r3==1) document.getElementById('cs3').innerHTML="3rd Case: Victory";
+            else document.getElementById('cs3').innerHTML="3rd Case: Defeat";
+            if(r1+r2+r3>=2){
+              alert("~Victory~");
+              document.getElementById('hd').innerHTML="~VICTORY~";
+            }
+            else{
+              alert("~Defeat~");
+              document.getElementById('hd').innerHTML="~DEFEAT~";
+            }
+          }
+        }
+        //30 clicks
+        else{
+          if(r1+r2+r3>=2){
+            alert("~Victory~");
+            document.getElementById('hd').innerHTML="~VICTORY~";
+          }
+          else{
+            alert("~Defeat~");
+            document.getElementById('hd').innerHTML="~DEFEAT~";
+          }
+        }
+      }
+    </script>
+    <script type="text/javascript">
+    function read_ins(){
+      //alert("Hello.Welcome to the game 50/50.This is game of probability or luck . But this is a challenge of victory. [Press 'OK' to continue]");
+      //alert("The game has only one rule.The rule is 'You can only press the patterns for 10 times'. And then 'victory',to grab it your bar must have the same amount of thing as the starting.The amount is 50%.[Press 'OK' to continue]");
+      //alert("You'll have to earn it. 10 times that's all.Continue the game.Good Luck.");
+    }
+    </script>
+  </body>
+</html>
