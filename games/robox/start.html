@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Robox Fight</title>
+    <style media="screen">
+      body{
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+    <img src="starting/starting.gif" alt="" height="900px" width="650px" id="image">
+    <audio src="sounds/starting.mp3" autoplay></audio>
+    <p> </p>
+    <button type="button" name="button"  onclick="cng_poster()" >Continue</button>
+    <a href="[game-r1-r2]1.html"><button type="button" name="button">Start</button></a>
+  </center>
+  <script type="text/javascript">
+    x=0;
+    function cng_poster(){
+      if(x==3){
+        document.getElementById('image').src="intro/int-r2.gif";
+        x++;
+      }
+      if(x==2){
+        document.getElementById('image').src="intro/int-r1.gif";
+        x++;
+      }
+      if(x==1){
+        document.getElementById('image').src="posters/|r1-r2|.png";
+        x++;
+      }
+      if(x==0){
+        document.getElementById('image').src="posters/r1-r2.png";
+        x++;
+      }
+    }
+  </script>
+  </body>
+</html>

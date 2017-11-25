@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Robox Fight</title>
+    <style media="screen">
+      h1{
+        font-family: monospace;
+      }
+      button{
+        font-family: monospace;
+      }
+      h2{
+        background-color: white;
+        font-family: monospace;
+      }
+      body{
+        background-color: #33001a;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h1>Darspyro</h1>
+      <progress value="100" max="100" id="pb1"></progress>
+      <p> </p>
+      <img src="r1-r2/r1-r2.png" alt="" id="image">
+      <audio src="" autoplay id="audio"></audio>
+      <p> </p>
+      <progress value="100" max="100" id="pb2"></progress>
+      <h1>Mystesic</h1>
+      <button type="button" name="button" onclick="laser()">Laser</button>
+      <button type="button" name="button" onclick="shield()">Gaining Shield</button>
+      <button type="button" name="button" onclick="reflect()">Reflect</button>
+      <button type="button" name="button" onclick="dark_shock()">Dark-Shock</button>
+      <h2 id="status1">-</h2>
+      <h2 id="status2">-</h2>
+      <button type="button" name="button" onclick="opp_att()">Continue</button>
+      <h3>[In Development]</h3>
+    </center>
+    <script src="att.js"></script>
+  </body>
+</html>
