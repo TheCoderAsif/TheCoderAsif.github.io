@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!10 musics - 7 quotes>
+<!13 musics - 7 quotes>
 <html>
   <head>
     <meta charset="utf-8">
@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="icon.ico" />
     <style media="screen">
       img{
-        padding-top: 12%;
+        padding-top: 9%;
       }
       h3{
         color: #fff9c4 ;
@@ -41,7 +41,7 @@
        //image
        //music
        var gen;
-       gen=Math.floor(Math.random()*10)+1;
+       gen=Math.floor(Math.random()*13)+1;
        if(gen==1) document.getElementById('music').src="music/1.mp3";
        else if(gen==2) document.getElementById('music').src="music/2.mp3";
        else if(gen==3) document.getElementById('music').src="music/3.mp3";
@@ -52,6 +52,10 @@
        else if(gen==8) document.getElementById('music').src="music/8.mp3";
        else if(gen==9) document.getElementById('music').src="music/9.mp3";
        else if(gen==10) document.getElementById('music').src="music/10.mp3";
+       else if(gen==11) document.getElementById('music').src="music/11.mp3";
+       else if(gen==12) document.getElementById('music').src="music/12.mp3";
+       else if(gen==13) document.getElementById('music').src="music/12.mp3";
+       //alert(gen);
        //music
     }
     //quote
