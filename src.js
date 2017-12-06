@@ -24,9 +24,9 @@ var i=1,r=Math.floor(Math.random()*7)+1;
        else if(gen==8) document.getElementById('music').src="music/8.mp3";
        else if(gen==9) document.getElementById('music').src="music/9.mp3";
        else if(gen==10) document.getElementById('music').src="music/10.mp3";
-       //else if(gen==11) document.getElementById('music').src="music/11.mp3";
-       //else if(gen==12) document.getElementById('music').src="music/12.mp3";
-       //else if(gen==13) document.getElementById('music').src="music/12.mp3";
+       else if(gen==11) document.getElementById('music').src="music/11.mp3";
+       else if(gen==12) document.getElementById('music').src="music/12.mp3";
+       else if(gen==13) document.getElementById('music').src="music/13.mp3";
        //alert(gen);
        //music
     }
